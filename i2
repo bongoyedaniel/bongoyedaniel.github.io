@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Game Projects</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>My Game Projects</h1>
+  <p>Welcome to my portfolio of game projects!</p>
+
+  <section>
+    <h2>Games</h2>
+    <ul>
+      <li>
+        <h3>Game Title 1</h3>
+        <p>A brief description of your game. Briefly explain the genre, gameplay, and any unique features.</p>
+        <a href="https://your-game-link-1">Play Now!</a>
+      </li>
+      <li>
+        <h3>Game Title 2</h3>
+        <p>Another description of your game.</p>
+        <a href="https://your-game-link-2">Play Here!</a>
+      </li>
+      </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me about my games!</p>
+    <ul>
+      <li><a href="mailto:youremail@example.com">Email</a></li>
+      <li><a href="https://your-social-media.com">Social Media</a></li>
+    </ul>
+  </section>
+</body>
+</html>
