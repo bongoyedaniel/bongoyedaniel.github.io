@@ -10,34 +10,20 @@
                 "ios": "",
                 "android": "https://example.com/download/carrush2/1.0.0/android",
                 "linux": ""
-            },
-            {
-                "v": "1.0.1",
-                "windows": "https://example.com/download/carrush2/1.0.1/windows",
-                "ios": "",
-                "android": "https://example.com/download/carrush2/1.0.1/android",
-                "linux": "https://example.com/download/carrush2/1.0.1/linux"
             }
         ]
     },
     {
-        "name": "Space Adventure",
-        "des": "Explore the galaxy in this epic space shooter",
-        "iframeLink": "https://example.com/games/spaceadventure/embed",
+        "name": "Agent",
+        "des": "simple camera and character controller ",
+        "iframeLink": "https://bongoye.itch.io/agent",
         "versions": [
             {
                 "v": "1.0.0",
-                "windows": "https://example.com/download/spaceadventure/1.0.0/windows",
-                "ios": "https://example.com/download/spaceadventure/1.0.0/ios",
+                "windows": "https://bongoye.itch.io/agent/purchase",
+                "ios": "",
                 "android": "",
-                "linux": "https://example.com/download/spaceadventure/1.0.0/linux"
-            },
-            {
-                "v": "2.0.0",
-                "windows": "https://example.com/download/spaceadventure/2.0.0/windows",
-                "ios": "https://example.com/download/spaceadventure/2.0.0/ios",
-                "android": "https://example.com/download/spaceadventure/2.0.0/android",
-                "linux": "https://example.com/download/spaceadventure/2.0.0/linux"
+                "linux": ""
             }
         ]
     }
