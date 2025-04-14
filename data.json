@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Car Rush 2.0",
+        "des": "High-speed racing game with realistic physics",
+        "iframeLink": "https://img.itch.zone/aW1hZ2UvMzQ3MjY2NC8yMDcxODU1NS5wbmc=/original/VazZgd.png",
+        "versions": [
+            {
+                "v": "1.0.0",
+                "windows": "https://example.com/download/carrush2/1.0.0/windows",
+                "ios": "",
+                "android": "https://example.com/download/carrush2/1.0.0/android",
+                "linux": ""
+            },
+            {
+                "v": "1.0.1",
+                "windows": "https://example.com/download/carrush2/1.0.1/windows",
+                "ios": "",
+                "android": "https://example.com/download/carrush2/1.0.1/android",
+                "linux": "https://example.com/download/carrush2/1.0.1/linux"
+            }
+        ]
+    },
+    {
+        "name": "Space Adventure",
+        "des": "Explore the galaxy in this epic space shooter",
+        "iframeLink": "https://example.com/games/spaceadventure/embed",
+        "versions": [
+            {
+                "v": "1.0.0",
+                "windows": "https://example.com/download/spaceadventure/1.0.0/windows",
+                "ios": "https://example.com/download/spaceadventure/1.0.0/ios",
+                "android": "",
+                "linux": "https://example.com/download/spaceadventure/1.0.0/linux"
+            },
+            {
+                "v": "2.0.0",
+                "windows": "https://example.com/download/spaceadventure/2.0.0/windows",
+                "ios": "https://example.com/download/spaceadventure/2.0.0/ios",
+                "android": "https://example.com/download/spaceadventure/2.0.0/android",
+                "linux": "https://example.com/download/spaceadventure/2.0.0/linux"
+            }
+        ]
+    }
+]
