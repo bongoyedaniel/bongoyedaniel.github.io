@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" charset="UTF-8" content="width=device-width,initial-scale=1.0">	
+	<link rel="stylesheet" href="styles.css">	
+	<title>Bongoye>Games </title>
+</head>
+
+<body>
+	<div id="header">
+		<h2 id="title" >Bongoye</h1>
+		<li id="updateItem">
+			<!--<p style="color:red;">Go online...</p>-->
+			<button onclick="update()">Update</button>
+		</li>
+	</div>
+		
+	<br><br>
+	<div id="list" >
+		
+		<li class="item">
+			<h3>Skills</h3>
+			<p></p>
+			<ul style="list-style-type:;" >
+				
+				<li>Software Development (Java, Javascript, Typescript)</li>
+				<li>Web development</li>
+				<li>Game programming (Unity)</li>
+				<li>App development</li>
+				<li>Database management</li>
+				<li>Data input/analysis</li>
+			</ul>
+		</li>
+				
+		<li class="item">
+			<h3>Interests</h3>
+			<ul>
+				<li>Robotics</li>
+				<li>Automation and AI</li>
+			</ul>
+		</li>
+		
+	
+		<li class="item">
+			<h3>Experience</h3>
+			<ul>
+				<li>(2024) Software Developer : Swahilipot Hub: Intern</li>
+			</ul>
+		</li>
+		
+		<!--
+		<li class="item">
+		<h3>Education</h3>
+		<ul>
+		<li>[2016] <b>Segero Primary School</b> : 360/500</li>
+		<li>[2020] <b>Segero Adventist High School</b> : B+</li>
+		<li>[2025] <b>Pwani University</b> : </li>
+		</ul>
+		</li>
+		-->
+		
+		<li class="item">
+			<h3>Products</h3>
+			<p>Software</p>
+			<ul>
+				<li><a href="Games.html">Games</a></li>
+				<li><a href="o">Utility</a></li>
+			</ul>
+			<p>Videos/Tutorials</p>
+			<ul>
+				<li><a href="Youtube.html" >Youtube</a></li>
+			</ul>
+		</li>
+		
+		<li class="item">
+			<h3>Socials</h3>
+			<ul>
+				<li><a href="">LinkedIn</a></li>
+				<li><a href="">Github</a></li>
+				<li><a href="">Itch</a></li>
+				<li><a href="">Upwork</a></li>
+				<!--
+				<li><a href="">Facebook</a></li>
+				
+				<li><a href="">Instagram</a></li>
+				<li><a href="">X</a></li>
+				-->
+				<li><a href="https://m.youtube.com">Youtube</a></li>
+				<li><a href="mailto:bongoyepublic@gmail.com">Mail me</a></li>
+				<li><a onclick="about()">About 1</a></li>		
+				<!--
+				<li><a href="">Discord</a></li>
+				<li><a href="">Telegram</a></li>
+				-->
+			</ul>
+		</li>
+		
+		<li class="item" >
+			<h3>Downloads</h3>
+			<ul style="list-style:none;" >
+				<li>
+				<form method="post" action="a.apk">
+				<input value="Curiculum vitae" type="submit">
+				</form>
+				</li>
+				
+				<li>
+				<form method="post" action="a.apk">
+				<input value="Curiculum vitae" type="submit">
+				</form>
+				</li>
+			</ul>
+		</li>
+		
+		<small style="display:;" >1.3.7 <b>&copy;2025</b><b id="lastUpdated" style="display:none;" >
+		</b></small>	
+	</div>
+	
+	<div id="navBar" >
+		<div>	
+		<button>Home</button>
+		<button>Games</button>	
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+function toDataURL(url) {
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function() {
+    var output = this.response;
+    alert(output)
+  };
+  
+  xhr.onerror = function(){
+  }
+  xhr.open('GET', url);
+  xhr.send();
+}
+
+function update(){
+	document.getElementById("other").innerHTML = "<a id='QA' href='?update'></a>";
+	document.getElementById("QA").click();
+}
+
+function goToUpdate(){
+	document.getElementById("other").innerHTML = "<a id='QA' href='#'></a>";
+	document.getElementById("QA").click();
+}
+
+let info = "a";
+function about(){
+	alert(info);
+	let a = prompt("q");
+	alert(a);
+}
+	</script>
+
+<b id="other"></b> 
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" charset="UTF-8">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="file" href="data.json">
+    
+    <title>Bongoye>Games</title>
+    
+</head>
+
+<body>
+    <div id="header">
+        <h2 id="title">Games</h2>    
+    </div>
+    
+    <br/><br/>
+    
+    <ol id="list">
+    <p>Loading game list</p>
+        <!-- Games will be inserted here by JavaScript -->
+    </ol>
+    
+    <div id="footer">
+        <div class="social-icons">
+            <img src="/storage/emulated/0/.estrongs/.app_icon_back/com.google.android.youtube.png" alt="YouTube"> 
+            <img src="/storage/emulated/0/.estrongs/.app_icon_back/com.twitter.android.png" alt="Twitter"> 
+            <img src="/storage/emulated/0/im.png" alt="Social"> 
+        </div>
+        
+        <div class="copyright">
+            &copy;<script type="text/javascript">document.writeln(new Date().toString().split(" ")[3])</script>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // Fetch and process game data
+        function loadGameData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'data.json', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        try {
+                            var data = JSON.parse(xhr.responseText);
+                            displayGames(data);
+                        } catch (error) {
+                            console.error('Error parsing JSON:', error);
+                        }
+                    } else {
+                        console.error('Error loading game data. Status:', xhr.status);
+                    }
+                }
+            };
+            xhr.onerror = function() {
+            	document.getElementById('list').innerHTML = 
+            	('Error loading games <br><button onclick="loadGameData()">Try Again</button>');
+            };
+            xhr.send();
+        }
+
+        // Display all games from the data
+        function displayGames(games) {
+            const gamesList = document.getElementById('list');
+            gamesList.innerHTML = ''; // Clear any existing content
+            
+            games.forEach((game, index) => {
+                const gameItem = document.createElement('li');
+                gameItem.className = 'item';
+                
+                // Basic game info
+                gameItem.innerHTML = `
+                    <h3>${game.name}</h3>
+                    <p>${game.des || '<small>No description available</small>'}</p>
+                    ${game.iframeLink ? `<a href="${game.versions[0].android}"><iframe src="${game.iframeLink}" title="${game.name}"></iframe></a>` : ''}
+                    <!--<div class="download-section">
+                        <h3>Download</h3>
+                        <div class="select-row">
+                            <select id="version-select-${index}" onchange="updatePlatforms(${index})">
+                                <option disabled selected>Select version</option>
+                                ${game.versions.map(version => `<option value="${version.v}">${version.v}</option>`).join('')}
+                            </select>
+                            
+                            <select id="platform-select-${index}" onchange="prepareDownload(${index})" disabled>
+                                <option disabled selected>Select platform</option>
+                            </select>
+                        </div>
+                    </div>-->
+                    <a href="" id="download-link-${index}" style="display:none;"></a>
+                `;
+                
+                gamesList.appendChild(gameItem);
+            });
+        }
+
+        // Update available platforms when version changes
+        function updatePlatforms(gameIndex) {
+            const versionSelect = document.getElementById(`version-select-${gameIndex}`);
+            const platformSelect = document.getElementById(`platform-select-${gameIndex}`);
+            const selectedVersion = versionSelect.value;
+            
+            // Get the game data
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'data.json', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    try {
+                        const games = JSON.parse(xhr.responseText);
+                        const game = games[gameIndex];
+                        const version = game.versions.find(v => v.v === selectedVersion);
+                        
+                        // Clear and disable platform select initially
+                        platformSelect.innerHTML = '<option disabled selected>Select platform</option>';
+                        platformSelect.disabled = true;
+                        
+                        // Check which platforms are available
+                        const availablePlatforms = [];
+                        
+                        if (version.windows) availablePlatforms.push({name: 'Windows', value: 'windows', link: version.windows});
+                        if (version.ios) availablePlatforms.push({name: 'iOS', value: 'ios', link: version.ios});
+                        if (version.android) availablePlatforms.push({name: 'Android', value: 'android', link: version.android});
+                        if (version.linux) availablePlatforms.push({name: 'Linux', value: 'linux', link: version.linux});
+                        
+                        if (availablePlatforms.length > 0) {
+                            availablePlatforms.forEach(platform => {
+                                platformSelect.innerHTML += `<option value="${platform.value}" data-link="${platform.link}">${platform.name}</option>`;
+                            });
+                            platformSelect.disabled = false;
+                        } else {
+                            platformSelect.innerHTML = '<option disabled selected>No platforms available</option>';
+                        }
+                    } catch (error) {
+                        console.error('Error parsing game data:', error);
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        // Prepare download when platform is selected
+        function prepareDownload(gameIndex) {
+            const platformSelect = document.getElementById(`platform-select-${gameIndex}`);
+            const downloadLink = document.getElementById(`download-link-${gameIndex}`);
+            
+            const selectedOption = platformSelect.options[platformSelect.selectedIndex];
+            const downloadUrl = selectedOption.getAttribute('data-link');
+            
+            if (downloadUrl) {
+                downloadLink.href = downloadUrl;
+                downloadLink.click();
+            }
+        }
+
+        // Load game data when page loads
+        window.onload = loadGameData;
+    </script>
+</body>
+</html>

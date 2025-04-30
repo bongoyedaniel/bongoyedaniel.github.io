@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" charset="UTF-8">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="file" href="data.json">
+    
+    <title>Bongoye>Games</title>
+    
+</head>
+
+<body>
+    <div id="header">
+        <h2 id="title" >Youtube Videos</h2>    
+    </div>
+    
+    <br/><br/>
+    
+    <ol id="list">
+    <p>Loading game list</p>
+        <!-- Games will be inserted here by JavaScript -->
+        
+        
+    </ol>
+    
+    <script type="text/javascript">
+        // Fetch and process game data
+        function loadGameData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'videoData.json', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        try {
+                            var data = JSON.parse(xhr.responseText);
+                            displayYoutubeLinks(data);
+                        } catch (error) {
+                            console.error('Error parsing JSON:', error);
+                        }
+                    } else {
+                        console.error('Error loading game data. Status:', xhr.status);
+                    }
+                }
+            };
+            xhr.onerror = function() {
+            	document.getElementById('list').innerHTML = 
+            	('Error loading games <br><button onclick="loadGameData()">Try Again</button>');
+            };
+            xhr.send();
+        }
+
+        // Display all games from the data
+        function displayYoutubeLinks(data){
+        	document.getElementById('list').innerHTML ="";
+        	
+        	data.map((a)=>{
+	        	document.getElementById('list').innerHTML +=
+	        	`<li class="item">
+	        	<h3>${a.Title}</h3>
+	        	<p>${a.info}</p>
+			        <video style="width:100%;" controls>
+			        	<source src="${a.Links}"/>
+			        </video>
+	        	</li>`;      	
+        	});
+        }
+        
+        window.onload = loadGameData;
+    </script>
+</body>
+</html>
