@@ -7,12 +7,12 @@
 	<title>Bongoye>Games </title>
 </head>
 
-<body>
+<body onload="">
 	<div id="header">
 		<h2 id="title" >Bongoye</h1>
 		<li id="updateItem">
 			<!--<p style="color:red;">Go online...</p>-->
-			<button onclick="update()">Update</button>
+			<a href="?update"> <button>Update</button></a>
 		</li>
 	</div>
 		
@@ -49,23 +49,22 @@
 			</ul>
 		</li>
 		
-		<!--
-		<li class="item">
+		<li class="item" style="display:none;" >
 		<h3>Education</h3>
 		<ul>
-		<li>[2016] <b>Segero Primary School</b> : 360/500</li>
-		<li>[2020] <b>Segero Adventist High School</b> : B+</li>
-		<li>[2025] <b>Pwani University</b> : </li>
+		<li>[2016] <b>Segero Primary School</b></li>
+		<li>[2020] <b>Segero Adventist High School</b></li>
+		<li>[2025] <b>Pwani University</b> </li>
 		</ul>
 		</li>
-		-->
 		
-		<li class="item">
+		<li class="item" style="display:none;">
 			<h3>Products</h3>
 			<p>Software</p>
 			<ul>
 				<li><a href="Games.html">Games</a></li>
-				<li><a href="o">Utility</a></li>
+				<li><a href= "https://github.com/bongoyedaniel" >Utility</a></li>
+				<li><a href="">Apps</a></li> 
 			</ul>
 			<p>Videos/Tutorials</p>
 			<ul>
@@ -73,12 +72,12 @@
 			</ul>
 		</li>
 		
-		<li class="item">
+		<li class="item"  style="display:none;">
 			<h3>Socials</h3>
 			<ul>
 				<li><a href="">LinkedIn</a></li>
 				<li><a href="">Github</a></li>
-				<li><a href="">Itch</a></li>
+				<li><a href="https://bongoye.itch.io">Itch</a></li>
 				<li><a href="">Upwork</a></li>
 				<!--
 				<li><a href="">Facebook</a></li>
@@ -86,9 +85,8 @@
 				<li><a href="">Instagram</a></li>
 				<li><a href="">X</a></li>
 				-->
-				<li><a href="https://m.youtube.com">Youtube</a></li>
-				<li><a href="mailto:bongoyepublic@gmail.com">Mail me</a></li>
-				<li><a onclick="about()">About 1</a></li>		
+				<li><a href="https://youtube.com@bongoyedaniel">Youtube</a></li>
+				<li><a href="mailto:bongoyepublic@gmail.com">Mail me</a></li>		
 				<!--
 				<li><a href="">Discord</a></li>
 				<li><a href="">Telegram</a></li>
@@ -96,6 +94,7 @@
 			</ul>
 		</li>
 		
+		<!--
 		<li class="item" >
 			<h3>Downloads</h3>
 			<ul style="list-style:none;" >
@@ -112,9 +111,26 @@
 				</li>
 			</ul>
 		</li>
+		-->
+		<div style="text-align:center;">
+		<small class="hiddenOnWeb" >1.3.7 
+		<b>&copy;2025</b>
+		<b id="lastUpdated" style="display:none;" >
+		</b>
+		</small>
+		</div>
 		
-		<small style="display:;" >1.3.7 <b>&copy;2025</b><b id="lastUpdated" style="display:none;" >
-		</b></small>	
+		<div style="text-align:center;">
+		<u><b><small class="hiddenOnWeb"  onclick="about()">
+		About App</small></b></u>
+		</div>
+		
+		<small id="infoMore"  >
+		<small ><a href="index.html">see more</a></small>
+		</small>
+	
+		
+		<small style="display:none;"  id="other"></small>
 	</div>
 	
 	<div id="navBar" >
@@ -125,37 +141,32 @@
 	</div>
 	
 	<script type="text/javascript">
-function toDataURL(url) {
-  var xhr = new XMLHttpRequest();
-  xhr.onload = function() {
-    var output = this.response;
-    alert(output)
-  };
-  
-  xhr.onerror = function(){
-  }
-  xhr.open('GET', url);
-  xhr.send();
-}
-
-function update(){
-	document.getElementById("other").innerHTML = "<a id='QA' href='?update'></a>";
-	document.getElementById("QA").click();
-}
-
 function goToUpdate(){
 	document.getElementById("other").innerHTML = "<a id='QA' href='#'></a>";
 	document.getElementById("QA").click();
 }
 
-let info = "a";
+let info = null;
 function about(){
-	alert(info);
-	let a = prompt("q");
-	alert(a);
+	if(info) alert(info);
 }
+
+function showOnApp(){
+	let b = document.getElementsByClassName("item");
+	for(let i=0;i<b.length;i++) b[i].style.display = "block";
+	
+	b = document.getElementsByClassName("hiddenOnWeb");
+	for(let i=0;i<b.length;i++) b[i].style.display = "block";
+	
+	showOnWeb();
+}
+
+function showOnWeb(){
+document.getElementById("infoMore").style.display = "none";
+}
+
+//showOnApp()
 	</script>
 
-<b id="other"></b> 
 </body>
 </html>

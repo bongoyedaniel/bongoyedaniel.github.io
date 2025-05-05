@@ -38,6 +38,7 @@ body {
     margin: 0 auto;
     list-style-type:none;
     
+    justify-items:center;
 }
 
 #updateItem{
@@ -72,6 +73,10 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     overflow: hidden;
+    
+    
+    max-width:500px;
+    min-width:100%;
 }
 
 .item h3 {
@@ -177,8 +182,13 @@ select {
 }
 
 @media (min-width: 768px) {
-    #games-list {
+    #list {
         max-width: 800px;
+    }
+    
+    .item { 
+    	min-width:600px;
+    	max-width:400px;
     }
     
     #header {
@@ -193,4 +203,8 @@ select {
     select {
         width: 50%;
     }
+}
+
+.hiddenOnWeb {
+	display:none;
 }
