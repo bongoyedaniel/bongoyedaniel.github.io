@@ -44,7 +44,7 @@
                     if (xhr.status === 200) {
                         try {
                             var data = JSON.parse(xhr.responseText);
-                            displayGames(data);
+                            displayGames(data[0].games);
                         } catch (error) {
                             console.error('Error parsing JSON:', error);
                         }

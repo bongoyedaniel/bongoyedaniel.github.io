@@ -29,13 +29,13 @@
         // Fetch and process game data
         function loadGameData() {
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'videoData.json', true);
+            xhr.open('GET', 'data.json', true);
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
                         try {
                             var data = JSON.parse(xhr.responseText);
-                            displayYoutubeLinks(data);
+                            displayYoutubeLinks(data[0].videoData);
                         } catch (error) {
                             console.error('Error parsing JSON:', error);
                         }
