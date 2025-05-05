@@ -4,87 +4,33 @@
 		  {
 		    "name": "Racing game",
 		    "des": "Get to checkpoint on time",
-		    "iframeLink": "https://bongoye.itch.io/racing-game",
-		    "versions": [
-		      {
-		        "v": "1.0.0",
-		        "windows": "https://bongoye.itch.io/racing-game",
-		        "ios": "",
-		        "android": "",
-		        "linux": ""
-		      }
-		    ]
+		    "iframeLink": "https://bongoye.itch.io/racing-game"	    
 		  },
 		  {
 		    "name": "Car shooter",
 		    "des": "Explode oncoming traffic with a tank",
-		    "iframeLink": "https://bongoye.itch.io/car-shooter",
-		    "versions": [
-		      {
-		        "v": "1.0.0",
-		        "windows": "https://bongoye.itch.io/car-shooter",
-		        "ios": "",
-		        "android": "",
-		        "linux": ""
-		      }
-		    ]
+		    "iframeLink": "https://bongoye.itch.io/car-shooter"
 		  },
 		  {
 		    "name": "Mobile platformer",
 		    "des": "Dont fall ",
-		    "iframeLink": "https://bongoye.itch.io/mobile-platformer",
-		    "versions": [
-		      {
-		        "v": "1.0.0",
-		        "windows": "",
-		        "ios": "",
-		        "android": "https://bongoye.itch.io/mobile-platformer",
-		        "linux": ""
-		      }
-		    ]
+		    "iframeLink": "https://bongoye.itch.io/mobile-platformer"	    
 		  },
 		  {
 		    "name": "Agent",
 		    "des": "",
-		    "iframeLink": "https://itch.io/embed/3472664",
-		    "versions": [
-		      {
-		        "v": "1.0.0",
-		        "windows": "",
-		        "ios": "",
-		        "android": "https://bongoye.itch.io/agent",
-		        "linux": ""
-		      }
-		    ]
+		    "iframeLink": "https://itch.io/embed/3472664"
 		  },
 		  {
 		    "name": "Sprite prime",
 		    "des": "",
-		    "iframeLink": "https://bongoye.itch.io/spriteprime",
-		    "versions": [
-		      {
-		        "v": "1.0.0",
-		        "windows": "",
-		        "ios": "",
-		        "android": "https://bongoye.itch.io/spriteprime",
-		        "linux": ""
-		      }
-		    ]
+		    "iframeLink": "https://bongoye.itch.io/spriteprime"
 		  },
-			{
-		    "name": "tps",
-		    "des": "",
-		    "iframeLink": "https://itch.io/embed/3490949?linkback=true",
-		    "versions": [
-		      {
-		        "v": "1.0.0",
-		        "windows": "https://itch.io/embed/3490949?linkback=true",
-		        "ios": "",
-		        "android": "",
-		        "linux": ""
-		      }
-		    ]
-			}
+		  {
+		  	"name": "Tps",
+		  	"des": "another third person shooter",
+		  	"iframeLink": "https://bongoye.itch.io/spriteprime"
+		  }
 	 ],
 	 "videoData" : [
 	 	{
@@ -97,6 +43,36 @@
 		 	"info":"video",
 		 	"Links":"https://you.tube/"
 	 	}
+	 ],
+	 "files": [
+		 {
+		 "name": "Bongoye.html",
+		 "url": "https://bongoyedaniel.github.io/Bongoye.html"
+		 },
+		 {
+		 "name": "styles.css",
+		 "url": "https://bongoyedaniel.github.io/styles.css"
+		 },
+		 {
+		 "name": "Games.html",
+		 "url": "https://bongoyedaniel.github.io/Games.html"
+		 },
+		 {
+		 "name": "Youtube.html",
+		 "url": "https://bongoyedaniel.github.io/Youtube.html"
+		 },
+		 {
+		 "name":"data.json",
+		 "url": "https://bongoyedaniel.github.io/data.json"
+		 }
+	 ],
+	 "log":[
+		 {
+		 "lastUpdated": "5/22/2025, 7:15:19 PM",
+		 "lastChecked":"",
+		 "size": "60kb",
+		 "version": "1.3.7"	  
+		 }
 	 ]
 	}
 ]
