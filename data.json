@@ -70,7 +70,21 @@
 		        "linux": ""
 		      }
 		    ]
-		  }
+		  },
+			{
+		    "name": "tps",
+		    "des": "",
+		    "iframeLink": "https://itch.io/embed/3490949?linkback=true",
+		    "versions": [
+		      {
+		        "v": "1.0.0",
+		        "windows": "https://itch.io/embed/3490949?linkback=true",
+		        "ios": "",
+		        "android": "",
+		        "linux": ""
+		      }
+		    ]
+			}
 	 ],
 	 "videoData" : [
 	 	{
