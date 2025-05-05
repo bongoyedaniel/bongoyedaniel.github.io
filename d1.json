@@ -13,6 +13,10 @@
     	"url": "https://bongoyedaniel.github.io/Games.html"
     },
     {
+    "name": "Youtube.html",
+    "url": "https://bongoyedaniel.github.io/Youtube.html"
+    },
+    {
     	"name":"data.json",
     	"url": "https://bongoyedaniel.github.io/data.json"
     },
@@ -25,8 +29,8 @@
 	  {
 		  "lastUpdated": "5/22/2025, 7:15:19 PM",
 		  "lastChecked":"",
-		  "size": "5kb",
-		  "version": "1.5.9"	  
+		  "size": "60kb",
+		  "version": "1.4.7"	  
 	  }
   ]
 }
